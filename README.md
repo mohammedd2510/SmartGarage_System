@@ -65,8 +65,8 @@ This SmartGarage project consists of 7 modes:
 5. <u>**Car Detected Mode:**</u>                                                                               
    When the ultrasonic sensor detects a car entering the garage within a distance threshold of 30 cm or less, the MCU checks for available spaces. If space is available, the pin is requested. Failed attempts follow the same mechanism as in the Enter Garage Pin Mode. If the correct pin is entered, the garage door opens. The door closes once the car enters (ultrasonic sensor doesn't detect nearby cars).
 
-6. Car Exiting Mode:
+6. <u>**Car Exiting Mode:**</u>                                                                                                                                                            
     When the internal MCU detects motion using the PIR sensor, it sends a signal via UART to the external MCU to open the garage. If no motion is detected afterward, indicating that the car has left, a signal is sent to close the garage. The number of garage spaces increments upon car exit, and the value is saved in EEPROM.
 
-7. Fire Detected Mode: 
+7. <u>**Fire Detected Mode:**</u>                                                                                                                                                          
    The internal MCU continuously monitors the temperature using the LM35 sensor. If the temperature exceeds 50°C, indicating a fire, the buzzer rings, a signal is sent via UART to open the garage, and a fire detected message appears on the external LCD. The garage door remains open until the internal MCU sends a signal to close it, triggered by a decrease in temperature back to normal levels
