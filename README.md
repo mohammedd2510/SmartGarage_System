@@ -1,4 +1,4 @@
-# **    SmartHome Project Made by Mohamed Osama  **
+# **    SmartGarage System Made by Mohamed Osama  **
 
 ## Hardware used :
  1.  Atmega32
